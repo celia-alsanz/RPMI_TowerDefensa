@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1965110754808474217}
   - component: {fileID: 4789993304978220059}
   - component: {fileID: 8863813372955099559}
+  - component: {fileID: 827270897301420675}
   - component: {fileID: 6044981190001797382}
   - component: {fileID: 8359079395740148388}
-  - component: {fileID: -6090678886667850677}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -82,6 +82,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &827270897301420675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879706388935822352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5bd0467158394c45b5175d16f2db733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &6044981190001797382
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -109,19 +121,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 0.1
   enemigo: {fileID: 8463253909745694072, guid: 81bd113131041b8489e60133219cf78e, type: 3}
---- !u!54 &-6090678886667850677
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 879706388935822352}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.5
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0

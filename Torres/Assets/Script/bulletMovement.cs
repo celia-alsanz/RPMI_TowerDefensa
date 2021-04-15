@@ -21,9 +21,7 @@ public class bulletMovement : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // La bala se destruye en cuanto colisiona con algún objeto
-        Destroy(gameObject);
-    }
+  
+        
+    
 }
