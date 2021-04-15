@@ -15,8 +15,16 @@ public class bulletMovement : MonoBehaviour
 
     void Update()
     {
-        // Movimiento de la bala en el eje Y según la velocidad especificada
-       transform.position= Vector3.MoveTowards(transform.position, enemigo.transform.position, bulletSpeed);   
+        if (enemigo != null)
+        {
+            // Movimiento de la bala en el eje Y según la velocidad especificada
+            transform.position = Vector3.MoveTowards(transform.position, enemigo.transform.position, bulletSpeed);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+         
        
 
     }
