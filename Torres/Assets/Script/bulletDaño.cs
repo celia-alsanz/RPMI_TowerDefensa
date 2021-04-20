@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class bulletDaño : MonoBehaviour
 {
+    public int Daño;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class bulletDaño : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        --collision.gameObject.GetComponent<enemyHealth>().vidas;
+        collision.gameObject.GetComponent<enemyHealth>().vidas=-Daño;
         // La bala se destruye en cuanto colisiona con algún objeto
         Destroy(gameObject);
     }
