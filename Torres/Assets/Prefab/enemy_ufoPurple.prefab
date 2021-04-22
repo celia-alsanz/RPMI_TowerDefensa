@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40729c844a378f43b3779d700985077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidas: 3
 --- !u!114 &4121582429355480976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 6195556755747831336}
-  vidas: 3
   position: {x: 0, y: 1.6, z: 0}
 --- !u!195 &6195556755747831336
 NavMeshAgent:

@@ -11,22 +11,37 @@ public class Towershoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("Disparo", 3, 1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           GameObject bala= Instantiate(bulletShoot, transform.position+ new Vector3(0,height,0), Quaternion.identity);
-            bala.GetComponent<bulletMovement>().enemigo= enemigo;
-        }
+      
         
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // La bala se destruye en cuanto colisiona con algún objeto
         Destroy(gameObject);
+    }
+    private void Disparo()
+    {
+       
+        {
+            GameObject bala = Instantiate(bulletShoot, transform.position + new Vector3(0, height, 0), Quaternion.identity);
+            bala.GetComponent<bulletMovement>().enemigo = enemigo;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy")) 
+        {
+            enemigo = other.gameObject;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        enemigo = null;
     }
 }
