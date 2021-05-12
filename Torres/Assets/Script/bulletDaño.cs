@@ -18,7 +18,8 @@ public class bulletDaño : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        collision.gameObject.GetComponent<enemyHealth>().vidas=-Daño;
+        Debug.Log("Hola");
+        collision.gameObject.GetComponent<enemyHealth>().vidas-=Daño;
         // La bala se destruye en cuanto colisiona con algún objeto
         Destroy(gameObject);
     }

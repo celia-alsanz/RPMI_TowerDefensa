@@ -17,7 +17,7 @@ public class bulletMovement : MonoBehaviour
     {
         if (enemigo != null)
         {
-            // Movimiento de la bala en el eje Y según la velocidad especificada
+            // Movimiento de la bala hacia el enemigo
             transform.position = Vector3.MoveTowards(transform.position, enemigo.transform.position, bulletSpeed);
         }
         else

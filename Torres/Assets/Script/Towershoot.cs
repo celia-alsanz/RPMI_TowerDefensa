@@ -7,10 +7,12 @@ public class Towershoot : MonoBehaviour
     public GameObject bulletShoot;
     public GameObject enemigo;
     public float height;
+    public float ratio;
+    public float frecuenciaDisparo;
  
     // Start is called before the first frame update
     void Start()
-    {
+    {//Cada segundo intenta disparar
         InvokeRepeating("Disparo", 3, 1);
     }
 
@@ -28,13 +30,15 @@ public class Towershoot : MonoBehaviour
     private void Disparo()
     {
        
-        {
+        {//crea bala
             GameObject bala = Instantiate(bulletShoot, transform.position + new Vector3(0, height, 0), Quaternion.identity);
+            //objetivo
             bala.GetComponent<bulletMovement>().enemigo = enemigo;
         }
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Hola");
         if (other.CompareTag("Enemy")) 
         {
             enemigo = other.gameObject;
