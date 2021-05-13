@@ -8,13 +8,17 @@ public class enemyHealth : MonoBehaviour
     public int vidas;
     public int vidasMax = 10;
     public Slider slider;
+    public Transform camara;
     // Start is called before the first frame update
     void Start()
     {
         vidas = vidasMax;
         MaxSalud();
     }
-
+    private void LateUpdate()
+    {
+        slider.transform.LookAt(transform.position+camara.forward);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -30,10 +34,12 @@ public class enemyHealth : MonoBehaviour
     {
         slider.maxValue = vidas;
         slider.value = vidas;
+       
     }
     public void Lozania()
     {
         slider.value = vidas;
+        
     }
 
 }
