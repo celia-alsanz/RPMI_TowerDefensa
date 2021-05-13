@@ -18,8 +18,11 @@ public class bulletDaño : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Hola");
+       
         collision.gameObject.GetComponent<enemyHealth>().vidas-=Daño;
+       
+        //Los parentesis donde sale daño hacen referencia al valor de la funcion de enemy health, que ahí la he llemado damage.
+       // collision.gameObject.GetComponent<enemyHealth>().HacerDaño(Daño);
         // La bala se destruye en cuanto colisiona con algún objeto
         Destroy(gameObject);
     }
